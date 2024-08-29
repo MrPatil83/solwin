@@ -1,7 +1,7 @@
-import  { useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { FadeUp} from '../../utils/Animation';
-import { motion} from "framer-motion";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { FadeUp } from "../../utils/Animation";
+import { motion } from "framer-motion";
 
 const AnimatedNumberSection = () => {
   const [brands, setBrands] = useState(0);
@@ -34,45 +34,63 @@ const AnimatedNumberSection = () => {
 
   return (
     <motion.div
-    variants={FadeUp(0.3)}
-    initial="hidden"
-    whileInView={"visible"}
-    // whileHover={{ scale: 1.1 }}
-     className="py-8 bg-background rounded-[4rem] mx-auto w-[80rem] my-10" ref={ref}>
-      <div className="flex justify-around">
+      variants={FadeUp(0.3)}
+      initial="hidden"
+      whileInView={"visible"}
+      // whileHover={{ scale: 1.1 }}
+      className="py-8 w-[20rem] mb-48 bg-background rounded-[4rem] grid  mx-auto md:h-[10rem] md:w-[37rem] md:mb-[20rem] lg:h-[12rem] lg:w-[51rem] lg:mb-[40rem] xl:my-14 xl:w-[80rem] xl:h-[14rem] xl:mt-10"
+      ref={ref}
+    >
+      <div className=" justify-center text-center items-center grid grid-col-1 pl-14 md:grid-cols-4 md:ml-10 md:px-2 lg:px-1 xl:ml-24">
         <div className="w-1/4 text-center">
           <div className="p-4 rounded-lg">
-            <div className="text-[4rem] font-bold text-[#9729f2]">
-              <p><span>{brands}+</span></p>
+            <div className=" text-[3rem]  poppins-regular text-[#9729f2] md:text-[2rem] lg:text-[3rem] xl:text-[4rem]">
+              <p>
+                <span>{brands}+</span>
+              </p>
             </div>
-            <h3 className="mt-2 text-lg font-semibold text-secondary">Brands</h3>
+            <h3 className="mt-2 text-lg poppins-regular text-secondary md:text-sm md:mb-4 lg:text-base xl:text-lg xl:pl-4">
+              Brands
+            </h3>
           </div>
         </div>
 
         <div className="w-1/4 text-center">
           <div className="p-4 rounded-lg ">
-            <div className="text-[4rem] font-bold text-[#f9762a]">
-              <p><span>{products}+</span></p>
+            <div className=" text-[3rem] poppins-regular text-[#f9762a] md:text-[2rem] lg:text-[3rem] xl:text-[4rem]">
+              <p>
+                <span>{products}+</span>
+              </p>
             </div>
-            <h3 className="mt-2 text-lg font-semibold text-secondary">Products</h3>
+            <h3 className="mt-2 text-lg poppins-regular text-secondary md:text-sm md:mb-4 lg:text-base xl:text-lg xl:pl-4">
+              Products
+            </h3>
           </div>
         </div>
 
         <div className="w-1/4 text-center">
           <div className="p-4 rounded-lg ">
-            <div className="text-[4rem] font-bold text-[#db007c]">
-              <p><span>{useCases}+</span></p>
+            <div className=" text-[3rem] poppins-regular text-[#db007c] md:text-[2rem] lg:text-[3rem] xl:text-[4rem]">
+              <p>
+                <span>{useCases}+</span>
+              </p>
             </div>
-            <h3 className="mt-2 text-lg font-semibold text-secondary">Happy-Customers</h3>
+            <h3 className=" text-lg mt-2 poppins-regular text-secondary md:text-sm md:mb-4 lg:text-base xl:text-lg xl:w-[10rem]">
+              Happy-Customers
+            </h3>
           </div>
         </div>
 
         <div className="w-1/4 text-center">
           <div className="p-4 rounded-lg ">
-            <div className="text-[4rem] font-bold text-[#199e41]">
-              <p><span>{energySavings}%</span></p>
+            <div className=" text-[3rem] poppins-regular text-[#199e41] md:text-[2rem] lg:text-[3rem] xl:text-[4rem]">
+              <p>
+                <span>{energySavings}%</span>
+              </p>
             </div>
-            <h3 className="mt-2 text-lg font-semibold text-secondary">Energy Savings</h3>
+            <h3 className="mt-2 text-lg poppins-regular text-secondary md:text-sm md:mb-4 lg:text-base xl:text-lg xl:w-[10rem]">
+              Energy Savings
+            </h3>
           </div>
         </div>
       </div>

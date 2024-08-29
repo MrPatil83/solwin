@@ -62,7 +62,7 @@ const Home = () => {
 
   return (
     <>
-    <section className=' overflow-hidden -mt-7'>
+    <section className='overflow-hidden -mt-7'>
     <div
       id="carouselExampleCaptions"
       className="relative overflow-hidden"
@@ -208,34 +208,34 @@ const Home = () => {
         ><img className='h-[12rem] w-[18rem] py-2' src={SurveillanceSystem} alt=''/></motion.div>
     </div> */}
     <motion.div
-    variants={FadeRight(0.5)}
+    variants={FadeRight(1)}
     initial="hidden"
     whileInView={"visible"}
     // whileHover={{ scale: 1.1 }}
-     className='grid grid-cols-3 p-24  gap-4 overflow-hidden'>
+     className='grid p-14 gap-4 overflow-hidden md:grid-cols-3 lg:gap-6 lg:grid-cols-4'>
         <Link to="/smartlighting">
-        <img className=' cursor-pointer w-[31rem] rounded-2xl hover:scale-105' src={smartlighting} alt=''/>
+        <img className=' cursor-pointer w-full rounded-2xl hover:scale-105 md:h-[10rem] lg:h-[9rem] xl:mx-20 xl:h-[10rem] xl:w-[16rem]' src={smartlighting} alt=''/>
         </Link>
         <Link to="/homesequrity">
-        <img className=' cursor-pointer rounded-2xl hover:scale-105' src={IntelligentHomeSecurity} alt=''/>
+        <img className=' cursor-pointer w-full rounded-2xl hover:scale-105 md:h-[10rem] lg:h-[9rem] xl:mx-10 xl:h-[10rem] xl:w-[16rem]' src={IntelligentHomeSecurity} alt=''/>
         </Link>
         <Link to="/interactivehome">
-        <img className=' cursor-pointer rounded-2xl hover:scale-105' src={InteractiveHome} alt=''/>
+        <img className=' cursor-pointer rounded-2xl hover:scale-105 md:h-[10rem] lg:h-[9rem]  xl:h-[10rem] xl:w-[16rem]' src={InteractiveHome} alt=''/>
         </Link>
         <Link to="/Multimedia">
-        <img className=' cursor-pointer h-[17.4rem] w-[29rem] rounded-2xl hover:scale-105' src={multimedia} alt=''/>
+        <img className=' cursor-pointer h-[11rem] w-full rounded-2xl hover:scale-105 md:h-[10rem] lg:h-[9rem] xl:-mx-10 xl:h-[10rem] xl:w-[16rem]' src={multimedia} alt=''/>
         </Link>
         <Link to="/energyefficincy">
-        <img className=' cursor-pointer rounded-2xl h-[17.4rem] w-[29rem]  hover:scale-105' src={EnergyEfficiency} alt=''/>
+        <img className=' cursor-pointer rounded-2xl h-[11rem] w-full hover:scale-105 md:h-[10rem] lg:h-[9rem] xl:mx-20 xl:h-[10rem] xl:w-[16rem]' src={EnergyEfficiency} alt=''/>
         </Link>
         <Link to="/protection">
-        <img className='h-[17.4rem] w-[29rem]  cursor-pointer rounded-2xl hover:scale-105' src={Protection} alt=''/>
+        <img className=' h-[11rem] w-full cursor-pointer rounded-2xl hover:scale-105 md:h-[10rem] lg:h-[9rem]  xl:mx-10  xl:h-[10rem] xl:w-[16rem]' src={Protection} alt=''/>
         </Link>
         <Link to="/climate">
-        <img className=' h-[17.4rem] w-[29rem] cursor-pointer rounded-2xl hover:scale-105' src={ClimateControl} alt=''/>
+        <img className=' h-[11rem] w-full cursor-pointer rounded-2xl hover:scale-105 md:h-[10rem] lg:h-[9rem] xl:h-[10rem] xl:w-[16rem]' src={ClimateControl} alt=''/>
         </Link>
         <Link to="/surveillancesystem">
-        <img className='h-[17.4rem] w-[29rem]  cursor-pointer rounded-2xl hover:scale-105' src={SurveillanceSystem} alt=''/>
+        <img className=' h-[11rem] w-full cursor-pointer rounded-2xl hover:scale-105 md:h-[10rem] lg:h-[9rem] xl:-mx-10 xl:h-[10rem] xl:w-[16rem]' src={SurveillanceSystem} alt=''/>
         </Link>
     </motion.div>
     {/* fourt part of home */}
@@ -245,36 +245,36 @@ const Home = () => {
     whileInView={"visible"}
     // whileHover={{ scale: 1.1 }}
      className=' overflow-hidden'>
-    <h3 className=' flex justify-center text-5xl poppins-regular text-primary'>Smart Home Concepts</h3>
+    <h3 className=' flex justify-center text-3xl md:text-5xl poppins-regular text-primary'>Smart Home Concepts</h3>
     <div className=''>
-        <p className=' px-24 poppins-extralight text-base  mt-4 text-[#0b132c]'>Enhanced home automation involves connecting all the functional elements of your home to a network, typically the Internet, and making them work seamlessly for you. This integration allows you to control, monitor, and track everything from lighting and air conditioning to television and door locks, all from your smartphone, computer, or tablet, no matter where you are in the world. To help you get started, we’ve broken down the home automation experience into individual concepts for a more personalized and comprehensive approach.</p>
-        <p className=' px-24 poppins-extralight mt-4 text-base text-[#0b132c]'>Enhanced home automation is about building your smart home lifestyle piece by piece. Think of concepts ⭐️ as the building blocks that come together to create a seamless and personalized experience ?<br/> Each concept plays a crucial role in making your home smarter, from controlling lighting and temperature to managing security and entertainment systems, all accessible from your smartphone, computer, or tablet, wherever you are in the world.</p>
+        <p className=' mx-auto p-2 text-sm md:px-24 poppins-extralight md:text-base  mt-4 text-[#0b132c]'>Enhanced home automation involves connecting all the functional elements of your home to a network, typically the Internet, and making them work seamlessly for you. This integration allows you to control, monitor, and track everything from lighting and air conditioning to television and door locks, all from your smartphone, computer, or tablet, no matter where you are in the world. To help you get started, we’ve broken down the home automation experience into individual concepts for a more personalized and comprehensive approach.</p>
+        <p className=' mx-auto p-2 text-sm md:px-24 poppins-extralight mt-4 md:text-base text-[#0b132c]'>Enhanced home automation is about building your smart home lifestyle piece by piece. Think of concepts ⭐️ as the building blocks that come together to create a seamless and personalized experience ?<br/> Each concept plays a crucial role in making your home smarter, from controlling lighting and temperature to managing security and entertainment systems, all accessible from your smartphone, computer, or tablet, wherever you are in the world.</p>
     </div>
     <br/>
-    <div className='mx-24 '>
-        <p className='text-[#0b132c]  poppins-regular '><strong className='text-[#0e1837]'>Smart Lighting : </strong>Transform your living spaces instantly with our smart lighting solutions, the ultimate mood setters. Whether you're looking to turn your living room into a lively discotheque or create a romantic ambiance in your bedroom, it's as simple as tapping a button on your smartphone. Plus, these lights aren't just for setting the scene-they're smart enough to fit into your daily routine. Create personalized schedules so your lights automatically welcome the evening and switch off when it's bedtime. You can even simulate an 'occupied home' look while you're away, all controlled remotely from anywhere in the world. Embrace the future of living with just a touch.</p>
+    <div className=' text-sm mx-auto p-2 md:text-base md:mx-20 '>
+        <p className='text-[#0b132c]  poppins-regular '><strong className='text-[#0e1837] text-xl'>Smart Lighting : </strong>Transform your living spaces instantly with our smart lighting solutions, the ultimate mood setters. Whether you're looking to turn your living room into a lively discotheque or create a romantic ambiance in your bedroom, it's as simple as tapping a button on your smartphone. Plus, these lights aren't just for setting the scene-they're smart enough to fit into your daily routine. Create personalized schedules so your lights automatically welcome the evening and switch off when it's bedtime. You can even simulate an 'occupied home' look while you're away, all controlled remotely from anywhere in the world. Embrace the future of living with just a touch.</p>
     </div>
-    <div className='mx-24 py-4'>
-        <p className='text-[#0b132c]'><strong className='text-[#0e1837]'>Intelligent Security : </strong>Protect your home from intruders with our intelligent security solutions. Once configured, door/window and motion sensors notify you when someone tries to break in your home, when you’re away. As an expansion to the range, we also have wireless doorbells and intelligent locks that provide an additional level of security and mental peace.</p>
+    <div className='text-sm mx-auto p-2 md:text-base md:mx-20'>
+        <p className='text-[#0b132c] poppins-regular'><strong className='text-[#0e1837] text-xl'>Intelligent Security : </strong>Protect your home from intruders with our intelligent security solutions. Once configured, door/window and motion sensors notify you when someone tries to break in your home, when you’re away. As an expansion to the range, we also have wireless doorbells and intelligent locks that provide an additional level of security and mental peace.</p>
     </div>
-    <div className='mx-24'>
-        <p className='text-[#0b132c]'><strong className='text-[#0e1837]'>Interactive Home : </strong>You can now control everything in your home through your smartphone or voice, no more reaching for switchboards or juggling remotes. With motion sensing and tap recognition (think knock-knock in Underwood style), your home responds to your every move.</p>
+    <div className='text-sm mx-auto p-2 md:text-base md:mx-20'>
+        <p className='text-[#0b132c] poppins-regular'><strong className='text-[#0e1837] text-xl'>Interactive Home : </strong>You can now control everything in your home through your smartphone or voice, no more reaching for switchboards or juggling remotes. With motion sensing and tap recognition (think knock-knock in Underwood style), your home responds to your every move.</p>
     </div>
-    <div className='mx-24 py-4'>
-        <p className='text-[#0b132c]'><strong className='text-[#0e1837]'>Multimedia : </strong>
+    <div className='text-sm mx-auto p-2 md:text-base md:mx-20'>
+        <p className='text-[#0b132c] poppins-regular'><strong className='text-[#0e1837] text-xl'>Multimedia : </strong>
         Smart multimedia control lets you wirelessly manage your TV, Xbox, or music player right from your smartphone. Enjoy advanced features like multi-room playback, specialized scenes, and seamless wireless streaming with our smart home solutions.</p>
     </div>
-    <div className='mx-24'>
-        <p className='text-[#0b132c]'><strong className='text-[#0e1837]'>Energy Efficiency : </strong>TUse the power of technology to save money. Our intelligent sensors automatically turn off your air-conditioner, lights and fans when you’re not home. If that’s not enough, we also give you insights into how much energy you’re consuming and how you can save by creating personalized schedules.</p>
+    <div className='text-sm mx-auto p-2 md:text-base md:mx-20'>
+        <p className='text-[#0b132c] poppins-regular'><strong className='text-[#0e1837] text-xl'>Energy Efficiency : </strong>TUse the power of technology to save money. Our intelligent sensors automatically turn off your air-conditioner, lights and fans when you’re not home. If that’s not enough, we also give you insights into how much energy you’re consuming and how you can save by creating personalized schedules.</p>
     </div>
-    <div className='mx-24 py-4'>
-        <p className='text-[#0b132c]'><strong className='text-[#0e1837]'>Protection : </strong>Receive immediate alerts on your smartphone when your home faces fire, flood, or any disaster. Our system can be configured to take swift corrective action—triggering alarms, turning on lights to capture attention, or automatically unlocking doors for a quick and safe evacuation.</p>
+    <div className='text-sm mx-auto p-2 md:text-base md:mx-20'>
+        <p className='text-[#0b132c] poppins-regular'><strong className='text-[#0e1837] text-xl'>Protection : </strong>Receive immediate alerts on your smartphone when your home faces fire, flood, or any disaster. Our system can be configured to take swift corrective action—triggering alarms, turning on lights to capture attention, or automatically unlocking doors for a quick and safe evacuation.</p>
     </div>
-    <div className='mx-24'>
-        <p className='text-[#0b132c]'><strong className='text-[#0e1837]'>Climate Control : </strong>Home automation elevates comfort by letting you monitor ambient temperatures throughout your home and sending commands to your central cooling system for optimal climate control. It also intelligently conserves energy by turning off the AC or cooling system when windows or doors are left open for an extended period.</p>
+    <div className='text-sm mx-auto p-2 md:text-base md:mx-20'>
+        <p className='text-[#0b132c] poppins-regular'><strong className='text-[#0e1837] text-xl'>Climate Control : </strong>Home automation elevates comfort by letting you monitor ambient temperatures throughout your home and sending commands to your central cooling system for optimal climate control. It also intelligently conserves energy by turning off the AC or cooling system when windows or doors are left open for an extended period.</p>
     </div>
-    <div className='mx-24 py-4'>
-        <p className='text-[#0b132c]'><strong className='text-[#0e1837]'>Surveillance : </strong>Stay connected to your home, even when you're away at the office or on vacation. Our intelligent CCTV cameras offer 24/7 monitoring, making it easy to keep an eye on what matters. These surveillance cameras can be installed as standalone wireless units or configured as part of a comprehensive NVR system to secure your entire property.</p>
+    <div className='text-sm mx-auto p-2 md:text-base md:mx-20'>
+        <p className='text-[#0b132c] poppins-regular'><strong className='text-[#0e1837] text-xl'>Surveillance : </strong>Stay connected to your home, even when you're away at the office or on vacation. Our intelligent CCTV cameras offer 24/7 monitoring, making it easy to keep an eye on what matters. These surveillance cameras can be installed as standalone wireless units or configured as part of a comprehensive NVR system to secure your entire property.</p>
     </div>
     </motion.div>
     {/* fifth part of home */}
