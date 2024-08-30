@@ -457,7 +457,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import logo from "../../../assets/Logo/logo.png";
+import logo from "../../../assets/Logo/logo.png"; // Correctly import the logo
 
 const Navbar = ({ navbarBg }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -488,7 +488,7 @@ const Navbar = ({ navbarBg }) => {
 
   return (
     <nav
-      className={`sticky top-0 left-0 h-auto w-auto poppins-regular z-20 transition duration-300 ${navbarBg} rounded-b-[2rem] `}
+      className={`sticky top-0 left-0 h-auto w-auto poppins-regular z-20 transition duration-300 ${navbarBg} rounded-b-[2rem]`}
       style={{ backgroundColor: "#0e1837" }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center lg:px-[5rem]">
@@ -496,12 +496,12 @@ const Navbar = ({ navbarBg }) => {
           <Link to="/">
             <img
               className="h-[12rem] w-[16rem] mx-auto p-2 -ml-9 hover:scale-125 transition-transform duration-700 cursor-pointer"
-              src={`../../../assets/Logo/logo.png`}
+              src={logo} // Use the imported logo
               alt="logo"
             />
           </Link>
         </div>
-        <div className="hidden lg:flex items-center space-x-10 ">
+        <div className="hidden lg:flex items-center space-x-10">
           <Link to="/" className="text-primary hover:text-secondary">
             Home
           </Link>
@@ -719,7 +719,7 @@ const Navbar = ({ navbarBg }) => {
             {isServiceOpen && (
               <div className="pl-4 text-primary">
                 <ul>
-                  <li className="hover:bg-gray-500 text-primary p-2 rounded-2xl">
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
                     <Link to="/lighting" onClick={handleLinkClick}>
                       Industrial Automation
                     </Link>
@@ -758,7 +758,7 @@ const Navbar = ({ navbarBg }) => {
             {isChargesOpen && (
               <div className="pl-4 text-primary">
                 <ul>
-                  <li className="hover:bg-gray-500 text-primary p-2 rounded-2xl">
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
                     <Link to="/smartlighting" onClick={handleLinkClick}>
                       Electrical Maintenance AMC's
                     </Link>
@@ -777,12 +777,6 @@ const Navbar = ({ navbarBg }) => {
               </div>
             )}
           </div>
-          <button
-            onClick={handleLinkClick}
-            className="ml-4 border border-[#f5ce02] text-sm bg-[#0e1837] text-primary hover:border-background hover:bg-[#f5ce02] hover:transition-transform duration-700 hover:text-background w-[8rem] h-[3rem] rounded-[1.5rem] cursor-pointer"
-          >
-            Get a Quote
-          </button>
         </div>
       )}
     </nav>
@@ -790,7 +784,6 @@ const Navbar = ({ navbarBg }) => {
 };
 
 Navbar.propTypes = {
-  logo: PropTypes.string.isRequired,
   navbarBg: PropTypes.string.isRequired,
 };
 
