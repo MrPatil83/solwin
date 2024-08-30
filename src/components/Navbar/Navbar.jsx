@@ -147,11 +147,13 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/Logo/logo.png";
+// import logo from "../../../assets/Logo/logo.png";
 
 const Navbar = ({ logo, navbarBg }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutomationOpen, setIsAutomationOpen] = useState(false);
+  const [isService, setIsService] = useState(false);
+  const [isCharges, setIsCharges] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -159,22 +161,31 @@ const Navbar = ({ logo, navbarBg }) => {
 
   const handleAutomationClick = () => {
     setIsAutomationOpen(!isAutomationOpen);
+   
+  };
+  const handleServiceClick = () => {
+    setIsService(!isService);
+  };
+  const handleChargesClick = () => {
+    setIsCharges(!isCharges);
   };
 
   const handleLinkClick = () => {
     setIsOpen(false);
     setIsAutomationOpen(false);
+    setIsService(false);
+    setIsCharges(false);
   };
 
   return (
     <nav
-      className={`sticky top-0 left-0 w-screen poppins-regular z-20 transition duration-300 ${navbarBg} rounded-b-3xl `}
+      className={`sticky top-0 left-0 h-auto w-auto poppins-regular z-20 transition duration-300 ${navbarBg} rounded-b-[2rem] `}
       style={{ backgroundColor: "#0e1837" }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center lg:px-[5rem]">
-        <div className="text-white font-bold text-lg">
+        <div className="text-white font-bold text-lg -my-[3rem]">
           <Link to="/">
-            <img className="h-20 w-48" src={logo} alt="logo" />
+            <img className="h-[100%] w-[195px] mx-auto p-4 hover:scale-125 transition-transform duration-700" src={`../../../assets/Logo/logo.png`} alt="logo" />
           </Link>
         </div>
         <div className="hidden lg:flex items-center space-x-10 ">
@@ -193,39 +204,87 @@ const Navbar = ({ logo, navbarBg }) => {
               Automation
             </button>
             {isAutomationOpen && (
-              <div className="absolute w-[14rem] -left-16 mt- bg-[#0e1837] text-primary shadow-lg rounded-2xl p-2 justify-center text-center">
+              <div className="absolute w-[14rem] -left-16 mt- bg-[#0e1837] bg-opacity-55 text-primary shadow-lg rounded-2xl p-2 justify-center text-center">
                 <ul>
-                  <li className="hover:bg-gray-500 text-primary p-2 rounded-2xl">
-                    <Link to="/lighting">Home Lighting</Link>
+                  <li className="hover:bg-gray-700 text-primary p-2 rounded-2xl">
+                    <Link to="/smartlighting">Home Lighting</Link>
                   </li>
-                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
-                    <Link to="/home-security">Home Security</Link>
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
+                    <Link to="/homesecurity">Home Security</Link>
                   </li>
-                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
-                    <Link to="/interactive-home">Interactive Home</Link>
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
+                    <Link to="/interactivehome">Interactive Home</Link>
                   </li>
-                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
                     <Link to="/multimedia">Multimedia</Link>
                   </li>
-                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
                     <Link to="/protection">Protection</Link>
                   </li>
-                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
                     <Link to="/climate">Climate</Link>
                   </li>
-                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
                     <Link to="/surveillance">Surveillance</Link>
                   </li>
                 </ul>
               </div>
             )}
           </div>
-          <Link to="/services" className="text-primary hover:text-secondary">
-            Services
-          </Link>
-          <Link to="/contact" className="text-primary hover:text-secondary">
-            Contact Us
-          </Link>
+          <div
+            className="relative group"
+            onMouseEnter={() => setIsService(true)}
+            onMouseLeave={() => setIsService(false)}
+          >
+            <button className="text-primary hover:text-secondary">
+              Services
+            </button>
+            {isService && (
+              <div className="absolute w-[14rem] -left-16 mt- bg-[#0e1837] bg-opacity-55 text-primary shadow-lg rounded-2xl p-2 justify-center text-center">
+                <ul>
+                  <li className="hover:bg-gray-700 text-primary p-2 rounded-2xl">
+                    <Link to="/lighting">Industrial Automation</Link>
+                  </li>
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
+                    <Link to="/home-security">IT Solutions</Link>
+                  </li>
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
+                    <Link to="/interactive-home">Electrical Work</Link>
+                  </li>
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
+                    <Link to="/multimedia">Electrical Starter Panals</Link>
+                  </li>
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
+                    <Link to="/protection">Ventilation Systems with PLC</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div
+            className="relative group"
+            onMouseEnter={() => setIsCharges(true)}
+            onMouseLeave={() => setIsCharges(false)}
+          >
+            <button className="text-primary hover:text-secondary">
+              Maintainance Charges
+            </button>
+            {isCharges && (
+              <div className="absolute w-[14rem] -left-7 mt- bg-[#0e1837] bg-opacity-55 text-primary shadow-lg rounded-2xl p-2 justify-center text-center">
+                <ul>
+                <li className="hover:bg-gray-700 text-primary p-2 rounded-2xl">
+                    <Link to="/smartlighting">Electrical Maintainance AMC's</Link>
+                  </li>
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
+                    <Link to="/homesecurity">Automation Panel AMC's</Link>
+                  </li>
+                  <li className="hover:bg-gray-700 p-2 rounded-2xl">
+                    <Link to="/interactivehome">Weighing Scales AMC's</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
         <div className="flex items-center">
           <button className="border border-[#f5ce02] text-sm bg-[#0e1837] hidden lg:block text-[#f5ce02] w-[8rem] h-[3rem] rounded-[1.5rem] cursor-pointer hover:border-background hover:bg-[#f5ce02] hover:transition-transform duration-700 hover:text-background">
@@ -299,13 +358,13 @@ const Navbar = ({ logo, navbarBg }) => {
               <div className="pl-4  text-primary">
                 <ul>
                   <li className="hover:bg-gray-500 p-2 rounded-2xl">
-                    <Link to="/lighting">Home Lighting</Link>
+                    <Link to="/smartlighting">Home Lighting</Link>
                   </li>
                   <li className="hover:bg-gray-500 p-2 rounded-2xl">
-                    <Link to="/home-security">Home Security</Link>
+                    <Link to="/homesecurity">Home Security</Link>
                   </li>
                   <li className="hover:bg-gray-500 p-2 rounded-2xl">
-                    <Link to="/interactive-home">Interactive Home</Link>
+                    <Link to="/interactivehome">Interactive Home</Link>
                   </li>
                   <li className="hover:bg-gray-500 p-2 rounded-2xl">
                     <Link to="/multimedia">Multimedia</Link>
@@ -323,20 +382,61 @@ const Navbar = ({ logo, navbarBg }) => {
               </div>
             )}
           </div>
-          <Link
-            to="/services"
-            onClick={handleLinkClick}
-            className="block px-4 py-4 text-primary hover:text-[#f5ce02]"
-          >
-            Services
-          </Link>
-          <Link
-            to="/contact"
-            onClick={handleLinkClick}
-            className="block px-4 py-4 text-primary hover:text-[#f5ce02]"
-          >
-            Contact Us
-          </Link>
+          <div className="relative">
+            <button
+              onClick={handleServiceClick}
+              className="block px-4 py-4 text-primary w-full text-left"
+            >
+              Services
+            </button>
+            {isService && (
+              <div className="pl-4  text-primary">
+                <ul>
+                  <li className="hover:bg-gray-500 text-primary p-2 rounded-2xl">
+                    <Link to="/smartlighting">IT Solutions</Link>
+                  </li>
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                    <Link to="/homesecurity">Electrical Work</Link>
+                  </li>
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                    <Link to="/interactivehome">Weighing Scales</Link>
+                  </li>
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                    <Link to="/multimedia">Industrial Automation</Link>
+                  </li>
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                    <Link to="/protection">Electrical Starter Panals</Link>
+                  </li>
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                    <Link to="/protection">Ventilation Systems with PLC</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div className="relative">
+            <button
+              onClick={handleChargesClick}
+              className="block px-4 py-4 text-primary w-full text-left"
+            >
+              Maintanance Charges
+            </button>
+            {isCharges && (
+              <div className="pl-4  text-primary">
+                <ul>
+                  <li className="hover:bg-gray-500 text-primary p-2 rounded-2xl">
+                    <Link to="/smartlighting">Electrical Maintainance AMC's</Link>
+                  </li>
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                    <Link to="/homesecurity">Automation Panel AMC's</Link>
+                  </li>
+                  <li className="hover:bg-gray-500 p-2 rounded-2xl">
+                    <Link to="/interactive-home">Weighing Scales AMC's</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
           <button className="ml-4 border border-[#f5ce02] text-sm bg-[#0e1837] text-primary hover:border-background hover:bg-[#f5ce02] hover:transition-transform duration-700 hover:text-background w-[8rem] h-[3rem] rounded-[1.5rem] cursor-pointer">
             Get a Quote
           </button>
